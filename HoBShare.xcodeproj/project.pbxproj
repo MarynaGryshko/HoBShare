@@ -14,7 +14,7 @@
 		074A4EF01CDB6E3E00E805E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 074A4EEF1CDB6E3E00E805E9 /* Assets.xcassets */; };
 		074A4EF31CDB6E3E00E805E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074A4EF11CDB6E3E00E805E9 /* LaunchScreen.storyboard */; };
 		074A4EFB1CDF900900E805E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074A4EFA1CDF900900E805E9 /* MapKit.framework */; };
-		07ED18451CE5494F0094FE42 /* StarterKit in Resources */ = {isa = PBXBuildFile; fileRef = 07ED18441CE5494F0094FE42 /* StarterKit */; };
+		079C0F6E1CFDB372004E1C24 /* StarterKit in Resources */ = {isa = PBXBuildFile; fileRef = 079C0F6D1CFDB372004E1C24 /* StarterKit */; };
 		07ED18481CE549DF0094FE42 /* SFLBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED18461CE549DF0094FE42 /* SFLBaseModel.swift */; };
 		07ED18491CE549DF0094FE42 /* SFLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED18471CE549DF0094FE42 /* SFLConnection.swift */; };
 		07ED184D1CE56D450094FE42 /* MeViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED184C1CE56D450094FE42 /* MeViewController .swift */; };
@@ -37,7 +37,7 @@
 		074A4EF21CDB6E3E00E805E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		074A4EF41CDB6E3E00E805E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		074A4EFA1CDF900900E805E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		07ED18441CE5494F0094FE42 /* StarterKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StarterKit; path = "../../../Desktop/iOS video/Swift/week4/StarterKit"; sourceTree = "<group>"; };
+		079C0F6D1CFDB372004E1C24 /* StarterKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = StarterKit; sourceTree = "<group>"; };
 		07ED18461CE549DF0094FE42 /* SFLBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFLBaseModel.swift; sourceTree = "<group>"; };
 		07ED18471CE549DF0094FE42 /* SFLConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFLConnection.swift; sourceTree = "<group>"; };
 		07ED184C1CE56D450094FE42 /* MeViewController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeViewController .swift"; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		074A4ED91CDB6E3E00E805E9 = {
 			isa = PBXGroup;
 			children = (
-				07ED18441CE5494F0094FE42 /* StarterKit */,
+				079C0F6D1CFDB372004E1C24 /* StarterKit */,
 				074A4EFA1CDF900900E805E9 /* MapKit.framework */,
 				074A4EE41CDB6E3E00E805E9 /* HoBShare */,
 				074A4EE31CDB6E3E00E805E9 /* Products */,
@@ -166,7 +166,7 @@
 				074A4EF31CDB6E3E00E805E9 /* LaunchScreen.storyboard in Resources */,
 				074A4EF01CDB6E3E00E805E9 /* Assets.xcassets in Resources */,
 				074A4EEB1CDB6E3E00E805E9 /* Main.storyboard in Resources */,
-				07ED18451CE5494F0094FE42 /* StarterKit in Resources */,
+				079C0F6E1CFDB372004E1C24 /* StarterKit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
