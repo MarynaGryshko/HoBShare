@@ -11,7 +11,7 @@ import UIKit
 import MapKit
 
 
-class HoBShareViewController: UIViewController, CLLocationManagerDelegate, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
+class HoBShareViewController: UIViewController, CLLocationManagerDelegate, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout//, UICollectionViewDataSource
 {
 
     @IBOutlet weak var hobbiesCollectionView: UICollectionView!

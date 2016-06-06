@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0723B65C1D04FE3E000CDB25 /* HobbiesCategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723B65B1D04FE3E000CDB25 /* HobbiesCategoryHeader.swift */; };
 		074A4EE61CDB6E3E00E805E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A4EE51CDB6E3E00E805E9 /* AppDelegate.swift */; };
 		074A4EE81CDB6E3E00E805E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A4EE71CDB6E3E00E805E9 /* ViewController.swift */; };
 		074A4EEB1CDB6E3E00E805E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074A4EE91CDB6E3E00E805E9 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0723B65B1D04FE3E000CDB25 /* HobbiesCategoryHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HobbiesCategoryHeader.swift; sourceTree = "<group>"; };
 		074A4EE21CDB6E3E00E805E9 /* HoBShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoBShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		074A4EE51CDB6E3E00E805E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		074A4EE71CDB6E3E00E805E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				074A4EF11CDB6E3E00E805E9 /* LaunchScreen.storyboard */,
 				074A4EF41CDB6E3E00E805E9 /* Info.plist */,
 				074A4EEC1CDB6E3E00E805E9 /* HoBShare.xcdatamodeld */,
+				0723B65B1D04FE3E000CDB25 /* HobbiesCategoryHeader.swift */,
 			);
 			path = HoBShare;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				07ED18591CE777020094FE42 /* HobbyCollectionViewCell.swift in Sources */,
 				07ED18491CE549DF0094FE42 /* SFLConnection.swift in Sources */,
 				07ED18511CE56DE60094FE42 /* EditHobbiesViewController.swift in Sources */,
+				0723B65C1D04FE3E000CDB25 /* HobbiesCategoryHeader.swift in Sources */,
 				07ED18571CE578CF0094FE42 /* DataProviders.swift in Sources */,
 				074A4EE81CDB6E3E00E805E9 /* ViewController.swift in Sources */,
 				07ED18481CE549DF0094FE42 /* SFLBaseModel.swift in Sources */,

@@ -14,3 +14,5 @@ let serverPath = "http://uci.smilefish.com/HBSRest-Dev/api/"
 
 let endpoint = "HobbyRest"
 
+let kMaxHobbies = 3
+
