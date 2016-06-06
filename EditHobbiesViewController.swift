@@ -46,6 +46,20 @@ class EditHobbiesViewController: HoBShareViewController {
         {
             requestUser.hobbies = myHobbies
         }
+        
+        HobbyDP().saveHobbiesForUser(requestUser){
+            (requestUser) -> () in
+            if requestUser.status == 0
+            {
+                self.saveHobbiesToUserDefault()
+                self.hobbiesCollectionView.reloadData()
+            }
+            else
+            {
+                self.showError(requestUser.status.statusDescription!)
+            }
+            
+        }
     }
     
 
