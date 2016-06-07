@@ -58,6 +58,8 @@ class HoBShareViewController: UIViewController, CLLocationManagerDelegate, UICol
             
             locationManager.startUpdatingLocation()
         }
+        
+        getHobbies()
     }
     
     
@@ -225,6 +227,17 @@ class HoBShareViewController: UIViewController, CLLocationManagerDelegate, UICol
         NSUserDefaults.standardUserDefaults().setValue(hobbyData, forKey: "MyHobbies")
         
         NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    func getHobbies() -> ()
+    {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey("MyHobbies") as? NSData
+        {
+            let savedHobbies = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! Array<Hobby>
+            
+            myHobbies = savedHobbies
+        }
+        
     }
 
     /*

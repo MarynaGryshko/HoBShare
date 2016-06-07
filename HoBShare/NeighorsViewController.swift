@@ -9,17 +9,90 @@
 import UIKit
 import MapKit
 
-class NeighorsViewController: HoBShareViewController {
+class NeighorsViewController: HoBShareViewController, MKMapViewDelegate
+{
 
     @IBOutlet weak var mapView: MKMapView!
     
+
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        mapView.delegate = self
+        
+    }
+    
+    override func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        currentLocation = locations.last!
+        
+        locationManager.stopUpdatingLocation()
+        
+        
+    }
+    
+    func centerMapOnCurrentLocation() -> ()
+    {
+        guard currentLocation != nil else
+        {
+            print("Current location unavailable")
+            return
+        }
+        
+        mapView.setCenterCoordinate(currentLocation!.coordinate, animated: true)
+        
+        
+        let currentRegion = mapView.regionThatFits(MKCoordinateRegionMake(CLLocationCoordinate2DMake(currentLocation!.coordinate.latitude, currentLocation!.coordinate.longitude), MKCoordinateSpanMake(0.5, 0.5)))
+        
+        mapView.setRegion(currentRegion, animated: true)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        if let users = self.users
+        {
+            mapView.removeAnnotations(users)
+        }
+        
+        self.fetchUsersWithHobby(myHobbies![indexPath.row])
+        
+        let cell = collectionView.dataSource?.collectionView(collectionView,cellForItemAtIndexPath:  indexPath) as! HobbyCollectionViewCell
+        
+        cell.backgroundColor = UIColor.redColor()
     }
 
+    
+    func fetchUsersWithHobby(hobby: Hobby)
+    {
+        guard (NSUserDefaults.standardUserDefaults().valueForKey("CurrentUserId") as? String)!.characters.count > 0 else
+        {
+            let alert = UIAlertController(title: "HoBshare", message: "Please login before selecting a hobby", preferredStyle: .Alert)
+            
+            let okAction = UIAlertAction(title: "Dismiss", style: .Default){
+                (action) in
+                    alert.dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+            alert.addAction(okAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
+        let requestUser = User()
+        
+        requestUser.userID = NSUserDefaults.standardUserDefaults().valueForKey("CurrentUserId") as? String
+        
+        requestUser.latitude = currentLocation?.coordinate.latitude
+        requestUser.longtitude = currentLocation?.coordinate.longitude
+        
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
